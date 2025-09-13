@@ -1,3 +1,9 @@
+import PopupWrapper from "../components/PopupWrapper";
+
 export default function Art() {
-    return <div className="p-10 text-center">Art & Design Page (Placeholder)</div>;
+    return (
+      <PopupWrapper>
+        <div className="p-10 text-center">About Me Page (Placeholder)</div>;
+      </PopupWrapper>
+    )
   }

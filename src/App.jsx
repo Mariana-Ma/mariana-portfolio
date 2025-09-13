@@ -14,9 +14,9 @@ function App() {
           path="/"
           element={
     
-            <div className="h-screen w-screen bg-black flex justify-center items-center relative">
+            <div className="h-screen w-screen bg-red flex justify-center items-center relative overflow-hidden">
               {/* Placeholder background */}
-              <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-purple-200 to-blue-200"></div>
+              <div className="absolute inset-0 w-full h-full bg-gradient-to-br from-purple-200 to-blue-200"></div>
 
               {/* Popup window */}
               <div className="relative z-10 bg-white rounded-2xl shadow-2xl p-20 w-[850px] h-[550px] flex flex-col justify-between">
