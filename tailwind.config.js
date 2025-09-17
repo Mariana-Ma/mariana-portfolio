@@ -2,7 +2,12 @@
 module.exports = {
     content: ["./index.html", "./src/**/*.{js,jsx,ts,tsx}"],
     theme: {
-      extend: {},
+      extend: {
+          fontFamily: {
+          minecraft: ['Minecraft', 'sans-serif'],
+          garet: ['Garet', 'sans-serif'],
+        },
+      },
     },
     plugins: [],
   };

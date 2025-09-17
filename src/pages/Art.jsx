@@ -1,40 +1,76 @@
 import PopupWrapper from "../components/PopupWrapper";
 
+const workProjects = [
+  {
+    title: "Project 1",
+    description: "Description of work project 1",
+    imageUrl: "https://via.placeholder.com/150",
+    link: "https://github.com/yourusername/project1"
+  },
+  {
+    title: "Project 2",
+    description: "Description of work project 2",
+    imageUrl: "https://via.placeholder.com/150",
+    link: "https://github.com/yourusername/project2"
+  }
+];
+
+const personalProjects = [
+  {
+    title: "Personal Project 1",
+    description: "Description of personal project 1",
+    imageUrl: "https://via.placeholder.com/150",
+    link: "https://github.com/yourusername/personal1"
+  },
+  {
+    title: "Personal Project 2",
+    description: "Description of personal project 2",
+    imageUrl: "https://via.placeholder.com/150",
+    link: "https://github.com/yourusername/personal2"
+  }
+];
+
 export default function Art() {
+  const renderProjectCard = ({ title, description, imageUrl, link }) => (
+    <div className="bg-white rounded-xl shadow-md p-4 flex flex-col items-center text-center">
+      <img src={imageUrl} alt={title} className="w-full h-40 object-cover rounded-md mb-4" />
+      <h3 className="font-bold text-lg mb-2">{title}</h3>
+      <p className="text-gray-700 mb-2">{description}</p>
+      {link && (
+        <a
+          href={link}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-blue-500 hover:underline"
+        >
+          View on GitHub
+        </a>
+      )}
+    </div>
+  );
+
   return (
     <PopupWrapper>
-      <div className="p-10">
-        {/* Title */}
-        <h1 className="text-3xl font-bold text-center mb-6">About Me</h1>
-
-        {/* Education Section */}
-        <div className="mb-8">
-          <h2 className="text-2xl font-semibold mb-3">Education</h2>
-          <ul className="list-disc list-inside space-y-2 text-lg">
-            <li>Northwestern University – B.S. in Computer Science & Statistics (Expected 2027)</li>
-            <li>Relevant Coursework: Data Structures, Machine Learning, Probability & Statistics</li>
-          </ul>
+      <div className="p-10 text-left">
+        <h1 className="text-3xl font-bold mb-6">Graphic & Digital Design</h1>
+        <div className="grid grid-cols-2 gap-6 mb-10">
+          {workProjects.map((proj, idx) => (
+            <div key={idx}>{renderProjectCard(proj)}</div>
+          ))}
         </div>
 
-        {/* Work Experience Section */}
-        <div className="mb-8">
-          <h2 className="text-2xl font-semibold mb-3">Work Experience</h2>
-          <ul className="list-disc list-inside space-y-2 text-lg">
-            <li>GNY – VP of Data Science, leading pricing modeling efforts</li>
-            <li>Plymouth Rock Assurance – Data Science Intern (Summer 2024)</li>
-            <li>Liberty Mutual – 17 years of leadership experience in data and analytics</li>
-          </ul>
+        <h1 className="text-3xl font-bold mb-6">Artwork</h1>
+        <div className="grid grid-cols-2 gap-6">
+          {personalProjects.map((proj, idx) => (
+            <div key={idx}>{renderProjectCard(proj)}</div>
+          ))}
         </div>
 
-        {/* Skills Section */}
-        <div className="mb-8">
-          <h2 className="text-2xl font-semibold mb-3">Skills</h2>
-          <ul className="list-disc list-inside space-y-2 text-lg">
-            <li>Python, R, SQL</li>
-            <li>Machine Learning and Predictive Modeling</li>
-            <li>Data Visualization (Tableau, Matplotlib, Seaborn)</li>
-            <li>Git/GitHub, AWS SageMaker</li>
-          </ul>
+        <h1 className="text-3xl font-bold mb-6">Bonus: my favorite crochet pieces!</h1>
+        <div className="grid grid-cols-2 gap-6">
+          {personalProjects.map((proj, idx) => (
+            <div key={idx}>{renderProjectCard(proj)}</div>
+          ))}
         </div>
       </div>
     </PopupWrapper>

@@ -7,7 +7,7 @@ export default function PopupWrapper({ children, backgroundClass = "bg-gradient-
 
       {/* Popup container */}
       <div className="relative flex justify-center items-center w-full h-full">
-        <div className="relative z-10 bg-white rounded-2xl shadow-2xl p-10 w-[850px] h-[550px] flex flex-col justify-between overflow-y-auto mt-6">
+        <div className="relative z-10 bg-white rounded-2xl shadow-2xl p-10 w-[850px] h-[550px] flex flex-col justify-between overflow-y-auto">
           {children} {/* <-- This is where page-specific content goes */}
         </div>
       </div>

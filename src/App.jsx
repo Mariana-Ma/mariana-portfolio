@@ -36,13 +36,11 @@ function App() {
                       pauseDuration={2500}
                       showCursor={true}
                       cursorCharacter="|"
-                      className = "text-4xl font-bold mt-10 mb-4 ml-8 font-serif"
+                      className = "text-4xl mt-10 mb-4 ml-8 font-minecraft tracking-wide"
                       textColors={["black"]}
                     />
-                    <p className="ml-8 text-gray-700">
-                      I’m a computer science and statistics double major at Northwestern University with a Managerial Analytics Certificate from
-                      the Kellogg School of Management. I'm passionate about exploring the intersection of these 3 fields, especially through 
-                      academics, projects, and work.
+                    <p className="text-2xl ml-8 mt-5 text-gray-700 font-garet">
+                      Computer scientist, analyst, aspiring SWE, and designer (all art on this page made by me!).
                     </p>
                   </div>
                 </div>
