@@ -20,3 +20,8 @@
   --font-minecraft: Minecraft, "sans-serif";
   --font-garet: Garet, "sans-serif";
 }
+
+.pixel-art {
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}
