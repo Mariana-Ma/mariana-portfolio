@@ -1,5 +1,6 @@
 
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import TextType from './components/TextType';
 import AboutMe from './pages/AboutMe.jsx';
 import Projects from './pages/Projects.jsx';
 import Art from './pages/Art.jsx';
@@ -29,9 +30,15 @@ function App() {
 
                   {/* Text */}
                   <div className="text-left flex-1">
-                    <h1 className="text-4xl font-bold mt-10 mb-4 ml-8 text-gray-900">
-                      Hi, I'm Mariana!
-                    </h1>
+                    <TextType 
+                      text={["Hi, I'm Mariana,", "Welcome to my portfolio!"]}
+                      typingSpeed={75}
+                      pauseDuration={2500}
+                      showCursor={true}
+                      cursorCharacter="|"
+                      className = "text-4xl font-bold mt-10 mb-4 ml-8 font-serif"
+                      textColors={["black"]}
+                    />
                     <p className="ml-8 text-gray-700">
                       I’m a computer science and statistics double major at Northwestern University with a Managerial Analytics Certificate from
                       the Kellogg School of Management. I'm passionate about exploring the intersection of these 3 fields, especially through 
