@@ -66,27 +66,29 @@ export default function Art() {
 
   return (
     <PopupWrapper>
-      <div className="p-10 text-left">
-        <h1 className="text-3xl font-minecraft mb-6">Graphic & Digital Design</h1>
-        <div className="grid grid-cols-2 gap-6 mb-10">
-          {graphicDesignProjects
-        .map((proj, idx) => (
-            <div key={idx}>{renderProjectCard(proj)}</div>
-          ))}
-        </div>
+      <div className="flex flex-col justify-center items-center h-full">
+        <div className="ml-5 pr-10 text-left max-h-[55vh] overflow-y-auto">
+          <h1 className="text-3xl font-minecraft mb-6">Graphic & Digital Design</h1>
+          <div className="grid grid-cols-2 gap-6 mb-10">
+            {graphicDesignProjects
+          .map((proj, idx) => (
+              <div key={idx}>{renderProjectCard(proj)}</div>
+            ))}
+          </div>
 
-        <h1 className="text-3xl font-minecraft mb-6">Artwork</h1>
-        <div className="grid grid-cols-2 gap-6 mb-10">
-          {artProjects.map((proj, idx) => (
-            <div key={idx}>{renderProjectCard(proj)}</div>
-          ))}
-        </div>
+          <h1 className="text-3xl font-minecraft mb-6">Artwork</h1>
+          <div className="grid grid-cols-2 gap-6 mb-10">
+            {artProjects.map((proj, idx) => (
+              <div key={idx}>{renderProjectCard(proj)}</div>
+            ))}
+          </div>
 
-        <h1 className="text-3xl font-minecraft mb-6">Bonus: my favorite crochet pieces!</h1>
-        <div className="grid grid-cols-2 gap-6">
-          {miscProjects.map((proj, idx) => (
-            <div key={idx}>{renderProjectCard(proj)}</div>
-          ))}
+          <h1 className="text-3xl font-minecraft mb-6">Bonus: my favorite crochet pieces!</h1>
+          <div className="grid grid-cols-2 gap-6">
+            {miscProjects.map((proj, idx) => (
+              <div key={idx}>{renderProjectCard(proj)}</div>
+            ))}
+          </div>
         </div>
       </div>
     </PopupWrapper>

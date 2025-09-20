@@ -13,27 +13,32 @@ export default function Home() {
       {/* Popup window */}
       <PopupWrapper>
         {/* Top content row */}
-        <div className="flex flex-row items-start gap-6">
+        <div className="flex flex-row items-start">
           {/* Photo */}
-          <div className="w-64 h-64 rounded-full bg-pink-300 flex items-center justify-center mt-20 text-white text-xl font-bold">
+          <div className="w-64 h-64 rounded-full bg-pink-300 flex items-center justify-center mt-16 text-white text-xl font-bold">
             Photo
           </div>
 
           {/* Text */}
-          <div className="text-left flex-1 mt-20">
+          <div className="text-left flex-1 mt-24">
+          {/* Typing text in its own container */}
+          <div className="mb-4 ml-14">
             <TextType 
               text={["Hi, I'm Mariana,", "Welcome to my portfolio!"]}
               typingSpeed={75}
               pauseDuration={2500}
               showCursor={true}
               cursorCharacter="|"
-              className="text-4xl mt-3 mb-4 ml-8 font-minecraft tracking-wide"
+              className="text-3xl font-minecraft tracking-wide"
               textColors={["black"]}
             />
-            <p className="text-2xl ml-8 mt-5 text-gray-700 font-garet">
-              Computer scientist, analyst, aspiring SWE, and designer (all art on this page made by me!).
-            </p>
           </div>
+
+          {/* Static paragraph below */}
+          <p className="text-2xl ml-14 mt-10 text-gray-700 font-garet">
+            Computer scientist, analyst, aspiring SWE, and designer (all art on this page made by me!).
+          </p>
+        </div>
         </div>
 
         {/* Buttons row at bottom */}
