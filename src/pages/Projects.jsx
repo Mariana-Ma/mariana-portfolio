@@ -3,6 +3,7 @@ import PopupWrapper from "../components/PopupWrapper";
 import daymetPicture from "../assets/daymetPicture.png"
 import leakbotPicture from "../assets/leakbotPicture.png"
 import seedswapPicture from "../assets/seedswapPicture.png"
+import StarBorder from "../components/StarBorder"
 
 const workProjects = [
   {
@@ -154,27 +155,29 @@ export default function Projects() {
   );
 
   return (
-    <PopupWrapper>
-      <div className="flex flex-col justify-center items-center h-full">
-        {/* Scrollable container */}
-        <div className="ml-5 pr-5 text-left max-h-[55vh] overflow-y-auto">
-          {/* Work Projects */}
-          <h1 className="text-3xl font-minecraft mb-6">Work Projects</h1>
-          <div className="grid grid-cols-2 gap-6 mb-10">
-            {workProjects.map((proj, idx) => (
-              <div key={idx}>{renderProjectCard(proj)}</div>
-            ))}
-          </div>
+    <div className="w-screen h-screen relative">
+      <PopupWrapper>
+        <div className="flex flex-col justify-center items-center h-full">
+          {/* Scrollable container */}
+          <div className="ml-5 pr-5 text-left max-h-[55vh] overflow-y-auto">
+            {/* Work Projects */}
+            <h1 className="text-3xl font-minecraft mb-6">Work Projects</h1>
+            <div className="grid grid-cols-2 gap-6 mb-10">
+              {workProjects.map((proj, idx) => (
+                <div key={idx}>{renderProjectCard(proj)}</div>
+              ))}
+            </div>
 
-          {/* Personal Projects */}
-          <h1 className="text-3xl font-minecraft mb-6">Personal Projects</h1>
-          <div className="grid grid-cols-2 gap-6">
-            {personalProjects.map((proj, idx) => (
-              <div key={idx}>{renderProjectCard(proj)}</div>
-            ))}
+            {/* Personal Projects */}
+            <h1 className="text-3xl font-minecraft mb-6">Personal Projects</h1>
+            <div className="grid grid-cols-2 gap-6">
+              {personalProjects.map((proj, idx) => (
+                <div key={idx}>{renderProjectCard(proj)}</div>
+              ))}
+            </div>
           </div>
         </div>
-      </div>
-    </PopupWrapper>
+      </PopupWrapper>
+    </div>
   );
 }
