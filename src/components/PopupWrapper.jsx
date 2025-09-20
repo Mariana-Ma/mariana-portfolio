@@ -1,15 +1,22 @@
 // src/components/PopupWrapper.jsx
-export default function PopupWrapper({ children, backgroundClass = "bg-gradient-to-br from-purple-200 to-blue-200" }) {
-  return (
-    <div className="w-screen h-screen overflow-hidden relative">
-      {/* Full-screen background */}
-      <div className={`absolute inset-0 ${backgroundClass}`}></div>
+import popupWindow from '../assets/popupWindow.png';
 
+export default function PopupWrapper({ children }) {
+  return (
+    <div className="w-screen h-screen overflow-hidden relative flex justify-center items-center">
       {/* Popup container */}
-      <div className="relative flex justify-center items-center w-full h-full">
-        <div className="relative z-10 bg-white rounded-2xl shadow-2xl p-10 w-[850px] h-[550px] flex flex-col justify-between overflow-y-auto">
-          {children} {/* <-- This is where page-specific content goes */}
-        </div>
+      <div 
+        className="relative z-10 rounded-3xl bg-transparent flex flex-col justify-between overflow-y-auto pixel-art"
+        style={{
+          backgroundImage: `url(${popupWindow})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          width: '850px',
+          height: '554px',
+          padding: '60px'
+        }}
+      >
+        {children}
       </div>
     </div>
   );

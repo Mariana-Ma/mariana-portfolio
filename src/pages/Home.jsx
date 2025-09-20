@@ -1,6 +1,7 @@
 // src/pages/Home.jsx
 import { Link } from 'react-router-dom';
 import TextType from '../components/TextType';
+import PopupWrapper from "../components/PopupWrapper";
 import dayBackground from '../assets/dayBackground.png';
 
 export default function Home() {
@@ -10,17 +11,16 @@ export default function Home() {
       style={{ backgroundImage: `url(${dayBackground})` }}
     >
       {/* Popup window */}
-      <div className="relative z-10 bg-white rounded-2xl shadow-2xl p-20 w-[850px] h-[550px] flex flex-col justify-between">
-        
+      <PopupWrapper>
         {/* Top content row */}
         <div className="flex flex-row items-start gap-6">
           {/* Photo */}
-          <div className="w-64 h-64 rounded-full bg-pink-300 flex items-center justify-center mt-4 text-white text-xl font-bold">
+          <div className="w-64 h-64 rounded-full bg-pink-300 flex items-center justify-center mt-20 text-white text-xl font-bold">
             Photo
           </div>
 
           {/* Text */}
-          <div className="text-left flex-1">
+          <div className="text-left flex-1 mt-20">
             <TextType 
               text={["Hi, I'm Mariana,", "Welcome to my portfolio!"]}
               typingSpeed={75}
@@ -62,7 +62,7 @@ export default function Home() {
             </button>
           </Link>
         </div>
-      </div>
+        </PopupWrapper>
     </div>
   );
 }
