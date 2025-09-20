@@ -19,7 +19,7 @@ export default function Home() {
         <div className="flex flex-row items-start">
           {/* Photo */}
           <div 
-            className="w-64 h-64 rounded-full flex items-center justify-center mt-16 ml-5 text-white text-xl font-bold z-10"
+            className="w-64 h-64 rounded-full flex items-center justify-center mt-12 ml-5 text-white text-xl font-bold z-10"
             style={{
               backgroundImage: `url(${marianaPicture})`, // <-- use template string
               backgroundSize: '110%',                 // optional, ensures it covers the div
@@ -50,29 +50,49 @@ export default function Home() {
         </div>
 
         {/* Buttons row at bottom */}
-        <div className="flex justify-center gap-4 mt-10 z-10">
+        <div className="flex justify-center gap-8 mt-8 z-10">
           <Link to="/aboutme">
-            <button className="bg-pink-500 text-white font-semibold py-2 px-4 rounded hover:bg-pink-100 transition duration-300">
-              About Me
-            </button>
+            <div className="flex flex-col items-center cursor-pointer transform transition-transform duration-300 hover:scale-110">
+              <img
+                src={aboutMeIcon} 
+                alt="About Me" 
+                className="w-24 h-20"
+              />
+              <span className="text-lg font-garet text-gray-800 text-center">About Me</span>
+            </div>
           </Link>
 
           <Link to="/projects">
-            <button className="bg-pink-500 text-white font-semibold py-2 px-4 rounded hover:bg-pink-100 transition duration-300">
-              Projects
-            </button>
+            <div className="flex flex-col items-center cursor-pointer transform transition-transform duration-300 hover:scale-110">
+              <img
+                src={projectsIcon} 
+                alt="Projects" 
+                className="w-24 h-20"
+              />
+              <span className="text-lg font-garet text-gray-800 text-center">Projects</span>
+            </div>
           </Link>
 
           <Link to="/art">
-            <button className="bg-blue-500 text-white font-semibold py-2 px-4 rounded hover:bg-blue-100 transition duration-300">
-              Art & Design
-            </button>
+            <div className="flex flex-col items-center cursor-pointer transform transition-transform duration-300 hover:scale-110">
+              <img
+                src={artIcon} 
+                alt="Art & Design" 
+                className="w-24 h-20"
+              />
+              <span className="text-lg font-garet text-gray-800 text-center">Art & Design</span>
+            </div>
           </Link>
 
           <Link to="/contact">
-            <button className="bg-green-500 text-white font-semibold py-2 px-4 rounded hover:bg-green-100 transition duration-300">
-              Contact
-            </button>
+            <div className="flex flex-col items-center cursor-pointer transform transition-transform duration-300 hover:scale-110">
+              <img
+                src={contactMeIcon} 
+                alt="Contact" 
+                className="w-24 h-20"
+              />
+              <span className="text-lg font-garet text-gray-800 text-center">Contact</span>
+            </div>
           </Link>
         </div>
       </PopupWrapper>
