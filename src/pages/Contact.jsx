@@ -12,7 +12,7 @@ export default function Contact() {
           {/* Title */}
           <h1 className="text-4xl font-minecraft mb-6 mt-6">Contact Me!</h1>
           <p className="mb-10 font-garet text-xl text-gray-700">
-            My preferred method of contact is email, as I respond the fastest. However, you can also find me on other social media / networking platforms. 
+            My preferred method of contact is e-mail, as I respond the fastest. However, you can also find me on other social media / networking platforms. 
           </p>
 
           <div className="mb-8">
