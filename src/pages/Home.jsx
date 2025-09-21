@@ -26,7 +26,8 @@ export default function Home() {
             style={{
               backgroundImage: `url(${marianaPicture})`, // <-- use template string
               backgroundSize: '110%',                 // optional, ensures it covers the div
-              backgroundPosition: 'center'             // optional, centers the image
+              backgroundPosition: 'center',
+              border: "6px solid #9387dc"
             }}>
           </div>
 

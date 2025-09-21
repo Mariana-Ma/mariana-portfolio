@@ -12,7 +12,8 @@ module.exports = {
     			garet: [
     				'Garet',
     				'sans-serif'
-    			]
+    			],
+          'garet-bold': ['Garet-Bold', 'sans-serif']
     		},
     		borderRadius: {
     			lg: 'var(--radius)',

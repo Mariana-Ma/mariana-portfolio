@@ -12,6 +12,13 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Garet-Bold';
+  src: url('./assets/fonts/Louis-George-Cafe-Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -19,6 +26,7 @@
 @theme{
   --font-minecraft: Minecraft, "sans-serif";
   --font-garet: Garet, "sans-serif";
+  --font-garet-bold: Garet-Bold, "sans-serif";
 }
 
 .pixel-art {
