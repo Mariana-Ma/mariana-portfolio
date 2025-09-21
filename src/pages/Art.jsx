@@ -207,6 +207,18 @@ export default function Art() {
               </div>
 
               <h1 className="text-2xl font-minecraft mb-4 mt-10">Digital Art</h1>
+              <p className="mb-5 font-garet text-xl text-gray-700">
+                For more digital art, you can check out my{' '}
+                <a
+                  href="https://www.instagram.com/mariiscribbles/?hl=en"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-500 hover:underline"
+                >
+                  Art Instagram Account
+                </a>
+                !
+              </p>
               <div className="grid grid-cols-3 gap-6 mb-10">
                 {digitalArt.map((img, idx) => (
                   <div key={idx}>{renderImageCard(img)}</div>
@@ -222,9 +234,9 @@ export default function Art() {
                   rel="noopener noreferrer"
                   className="text-blue-500 hover:underline"
                 >
-                  RedBubble shop
+                  RedBubble shop 
                 </a>
-                !
+                &nbsp;(200+ sales)!
               </p>
               <div className="grid grid-cols-3 gap-6 mb-10">
                 {stickers.map((img, idx) => (
