@@ -15,6 +15,9 @@ const items = [
 export default function Home() {
   return (
       <PopupWrapper>
+        <h1 className="absolute top-3 left-12 z-50 text-3xl text-gray-700 font-minecraft">
+          Home
+        </h1>
         {/* Top content row */}
         <div className="flex flex-row items-start">
           {/* Photo */}
