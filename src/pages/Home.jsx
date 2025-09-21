@@ -91,7 +91,7 @@ export default function Home() {
                 alt="Contact" 
                 className="w-24 h-20"
               />
-              <span className="text-lg font-garet text-gray-800 text-center">Contact</span>
+              <span className="text-lg font-garet text-gray-800 text-center">Contact Me</span>
             </div>
           </Link>
         </div>

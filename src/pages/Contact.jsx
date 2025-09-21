@@ -1,8 +1,10 @@
 import PopupWrapper from "../components/PopupWrapper";
+import BackButton from "../components/BackButton";
 
 export default function Contact() {
   return (
     <PopupWrapper>
+      <BackButton className="absolute top-3 left-7 z-50" />
       <div className="flex flex-col justify-center items-center h-full">
         <div className="ml-5 pr-10 text-left max-h-[55vh] overflow-y-auto">
           {/* Title */}

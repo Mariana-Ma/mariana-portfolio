@@ -3,7 +3,7 @@ import PopupWrapper from "../components/PopupWrapper";
 import daymetPicture from "../assets/daymetPicture.png"
 import leakbotPicture from "../assets/leakbotPicture.png"
 import seedswapPicture from "../assets/seedswapPicture.png"
-import StarBorder from "../components/StarBorder"
+import BackButton from "../components/BackButton";
 
 const workProjects = [
   {
@@ -157,6 +157,7 @@ export default function Projects() {
   return (
     <div className="w-screen h-screen relative">
       <PopupWrapper>
+        <BackButton className="absolute top-3 left-7 z-50" />
         <div className="flex flex-col justify-center items-center h-full">
           {/* Scrollable container */}
           <div className="ml-5 pr-5 text-left max-h-[55vh] overflow-y-auto">
