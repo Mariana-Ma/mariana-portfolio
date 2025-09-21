@@ -7,7 +7,29 @@ import strangerDesign from "../assets/strangerDesign.png"
 import skincareDesign from "../assets/skincareDesign.png"
 import toteBagDesign from "../assets/toteBagDesign.png"
 
+import catPainting from "../assets/catPainting.webp";
+import duckPainting from "../assets/duckPainting.webp";
+import skyPainting from "../assets/skyPainting.webp";
+import winterPainting from "../assets/winterPainting.webp";
+import JoshuaTreePark from "../assets/JoshuaTreePark.webp";
+import totoroPainting from "../assets/totoroPainting.webp";
 
+import catDigitalArt from "../assets/catDigitalArt.webp";
+import portraitDigitalArt from "../assets/portraitDigitalArt.webp";
+import flowerDigitalArt from "../assets/flowerDigitalArt.webp";
+import toastDigitalArt from "../assets/toastDigitalArt.webp";
+import frenchToastDigitalArt from "../assets/frenchToastDigitalArt.webp";
+import dessertDigitalArt from "../assets/dessertDigitalArt.webp";
+
+import mangoSticker from "../assets/mangoSticker.webp";
+import matchaSticker from "../assets/matchaSticker.webp";
+import berrySticker from "../assets/berrySticker.webp";
+import cakeSticker from "../assets/cakeSticker.webp";
+import slimeSticker from "../assets/slimeSticker.webp";
+import drinkSticker from "../assets/drinkSticker.webp";
+import orangeSticker from "../assets/orangeSticker.webp";
+import peachSticker from "../assets/peachSticker.webp";
+import strawberrySticker from "../assets/strawberrySticker.webp";
 
 import BackButton from "../components/BackButton";
 
@@ -47,29 +69,40 @@ const graphicDesignProjects = [
 ];
 
 const paintings = [
-  require('../assets/painting1.png'),
-  require('../assets/painting2.png'),
-  // add all your traditional art images
+  catPainting,
+  duckPainting,
+  skyPainting,
+  winterPainting,
+  JoshuaTreePark,
+  totoroPainting
 ];
 
 const digitalArt = [
-  require('../assets/digital1.png'),
-  require('../assets/digital2.png'),
-  // add all your digital art images
+  catDigitalArt,
+  portraitDigitalArt,
+  flowerDigitalArt,
+  toastDigitalArt,
+  frenchToastDigitalArt,
+  dessertDigitalArt
 ];
 
+
 const stickers = [
-  require('../assets/sticker1.png'),
-  require('../assets/sticker2.png'),
-  // add all your sticker images
+  mangoSticker,
+  matchaSticker,
+  berrySticker,
+  cakeSticker,
+  slimeSticker,
+  drinkSticker,
+  orangeSticker,
+  peachSticker,
+  strawberrySticker
 ];
 
 const artProjects = [
-  
 ];
 
-const miscProjects = [
-  
+const miscProjects = [ 
 ];
 
 export default function Art() {
@@ -80,6 +113,19 @@ export default function Art() {
   };
 
   const closePopup = () => setPopupImage(null);
+  
+  const renderImageCard = (imageUrl) => (
+    <div 
+      className="bg-white rounded-xl shadow-md overflow-hidden cursor-pointer transform transition-transform duration-300 hover:scale-105 aspect-square"
+      onClick={() => handleImageClick(imageUrl)}
+    >
+      <img
+        src={imageUrl}
+        alt="Artwork"
+        className="w-full md:h-48 lg:h-56 object-cover"
+      />
+    </div>
+  );
 
   const renderProjectCard = ({ title, description, imageUrl, link, linkText, skills = [] }) => (
     <div className="bg-white rounded-xl shadow-md p-4 flex flex-col w-full h-[400px]">
@@ -153,11 +199,38 @@ export default function Art() {
 
             {/* Personal Projects */}
             <h1 className="text-3xl font-minecraft mb-6">Other Visual Art</h1>
-            <div className="grid grid-cols-2 gap-6">
-              {artProjects.map((proj, idx) => (
-                <div key={idx}>{renderProjectCard(proj)}</div>
-              ))}
-            </div>
+            <h1 className="text-2xl font-minecraft mb-4 mt-10">Paintings (Traditional Art)</h1>
+              <div className="grid grid-cols-3 gap-6 mb-10">
+                {paintings.map((img, idx) => (
+                  <div key={idx}>{renderImageCard(img)}</div>
+                ))}
+              </div>
+
+              <h1 className="text-2xl font-minecraft mb-4 mt-10">Digital Art</h1>
+              <div className="grid grid-cols-3 gap-6 mb-10">
+                {digitalArt.map((img, idx) => (
+                  <div key={idx}>{renderImageCard(img)}</div>
+                ))}
+              </div>
+
+              <h1 className="text-2xl font-minecraft mb-4 mt-10">Stickers</h1>
+              <p className="mb-5 font-garet text-xl text-gray-700">
+                For more of my sticker work, you can check out my{' '}
+                <a
+                  href="https://www.redbubble.com/people/mariiscribbles8/shop?anchor=profile&asc=u"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-500 hover:underline"
+                >
+                  RedBubble shop
+                </a>
+                !
+              </p>
+              <div className="grid grid-cols-3 gap-6 mb-10">
+                {stickers.map((img, idx) => (
+                  <div key={idx}>{renderImageCard(img)}</div>
+                ))}
+              </div>
 
             {/*
               // Misc Projects section (potential future update)
